@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNIT 3 Jquery 03</title>
+    <script src="jquery-3.6.4.js" type="text/javascript" language="javascript">
+    </script>
+   <script type="text/javascript">
+    $(document).ready(function(){
+        $("img").bind("contextmenu",function(){
+            alert("disable right click");
+            return false;
+        });
+    });
+   </script>
+</head>
+<body>
+    <h1>Disable right click on lmage</h1>
+    <img src="One Piece 02.jpg" width="30%" height="30%">
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNIT 3 Jquery 06</title>
+    <script src="jquery-3.6.4.js" type="text/javascript" language="javascript">
+    </script>
+   <script type="text/javascript">
+    $(document).ready(function(){
+        var rval;
+        $("input[name='r']").change(function(){
+            rval=$("input[name='r']:checked").val();
+            if(rval=="hide")
+            {
+                $("img").hide(500);
+            }
+            else if(rval=="show")
+            {
+                $("img").show(1000);
+            }
+            else if(rval=="toggle")
+            {
+                $("img").toggle("slow");
+            }
+            else if(rval=="fadein")
+            {
+                $("img").fadeIn(3000);
+            }
+            else if(rval=="fadeout")
+            {
+                $("img").fadeOut("slow");
+            }
+            else if(rval=="slideup")
+            {
+                $("img").slideUp(3000);
+            }
+            else if(rval=="slidedown")
+            {
+                $("img").slideDown(1000);
+            }
+            else if(rval=="animation")
+            {
+                $("img").animate({width:"800px",height:"600px"});
+            }
+            else if(rval=="animationout")
+            {
+                $("img").animate({width:"250px",height:"150px"});
+            }
+            else
+            {
+                window.location("practical 07 Jquery.html");
+            }
+        });
+    });
+   </script>
+</head>
+<body>
+    <img src="4875079.jpg" width="500px" height="300px">
+    <div>
+            <input type="radio" name="r" value="hide"><span>hide</span>
+            <input type="radio" name="r" value="show"><span>show</span>
+            <input type="radio" name="r" value="toggle"><span>toggle</span>
+            <input type="radio" name="r" value="fadeout"><span>fadeout</span>
+            <input type="radio" name="r" value="fadein"><span>fadein</span>
+            <input type="radio" name="r" value="slideup"><span>slideup</span>
+            <input type="radio" name="r" value="slidedown"><span>slidedown</span>
+            <input type="radio" name="r" value="animation"><span>animation</span>
+            <input type="radio" name="r" value="animationout"><span>animation out</span>
+    </div>  
+</body>
+</html>

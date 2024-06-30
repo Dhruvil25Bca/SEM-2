@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNIT 3 Jquery 08</title>
+    <script src="jquery-3.6.4.js" type="text/javascript" language="javascript">
+    </script>
+   <script type="text/javascript">
+    $(document).ready(function(){
+        $("#all").click(function(){
+            $("img").animate({left:"300"});
+            $("img").animate({top:"300"});
+            $("img").animate({left:"0"});
+            $("img").animate({top:"0"});
+        });
+        $("#right").click(function(){
+            $("img").animate({left:"300"});
+        });
+        $("#bottom").click(function(){
+            $("img").animate({top:"300"});
+        });
+        $("#left").click(function(){
+            $("img").animate({left:"-100"});
+        });
+        $("#top").click(function(){
+            $("img").animate({top:"0"});
+        });
+    });
+   </script>
+   <style>
+img{
+    margin: 50px 0px 0px 20px;
+    position: fixed;
+}
+   </style>
+</head>
+<body>
+    <button id="all">rotation</button>
+    <button id="right">right</button>
+    <button id="bottom">bottom</button>
+    <button id="left">left</button>
+    <button id="top">top</button>
+    <img src="Dragon Ball Z.jpg" width="700" height="500">
+</body>
+</html>

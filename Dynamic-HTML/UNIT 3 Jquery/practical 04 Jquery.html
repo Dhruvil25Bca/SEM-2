@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNIT 3 Jquery 04</title>
+    <script src="jquery-3.6.4.js" type="text/javascript" language="javascript">
+    </script>
+   <script type="text/javascript">
+    $(document).ready(function(){//this code will count how many charecter on textarea
+        $("#string").keyup(function(){
+            var val;
+            var len;
+            var no=50;
+            val=$("#string").val();
+            len=val.length;
+            $("h2").text(len);
+            if(len<=50)
+            {
+                $("h2").text(len+"charecters you enter");
+            }
+            if(len>=50)
+            {
+                $("#string").css({"display":"none"});
+            }
+        });
+    });
+   </script>
+</head>
+<body>
+    <textarea id="string" cols="85" rows="10"></textarea>
+    <h2></h2>
+</body>
+</html>

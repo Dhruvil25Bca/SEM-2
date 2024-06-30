@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNIT 3 Jquery 07</title>
+    <script src="jquery-3.6.4.js" type="text/javascript" language="javascript">
+    </script>
+   <script type="text/javascript">
+    $(document).ready(function(){
+        $(this).change(function(){
+            var cval=[];
+            var len;
+            var sum=0;
+            $("input[name='c']:checked").map(function(){
+                len=cval.push($(this).val());
+            });
+                for(var i=0;i<len;i++)
+                {
+                    sum+=parseInt(cval[i]);
+                }
+                $("#arr").html(cval.join("<br>+"));
+                $("#ans").html(cval.join("<br>"+sum));
+                return false;
+        });
+    });
+   </script>
+   <style>
+    div{
+        position: fixed;
+        top: 20px;
+    }
+   </style>
+</head>
+<body>
+    <div id="chkbox">
+        <input type="checkbox" name="c" value="10" id="c1"><span>10</span>
+        <input type="checkbox" name="c" value="20" id="c2"><span>20</span>
+        <input type="checkbox" name="c" value="30" id="c3"><span>30</span>
+        <input type="checkbox" name="c" value="40" id="c4"><span>40</span>
+        <input type="checkbox" name="c" value="50" id="c5"><span>50</span>
+    </div>
+    <br><br>
+    <span id="arr" style="color: red;  padding-top: 200px;"></span>
+    <span id="ans" style="color: blue; padding-top:200px;"></span>
+</body>
+</html>
