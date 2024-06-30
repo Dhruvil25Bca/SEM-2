@@ -1,0 +1,24 @@
+.test1 {
+    color: lavender;
+    font-family: Old English Text MT;
+    font-size: 50pt;
+    text-align: center;
+}
+
+.test2 {
+    font-family: old English Text MT;
+    color: green;
+    font-size: 41pt;
+    text-align: right;
+}
+
+.test3 {
+    font-family: lucida sans unicode;
+    color: yellow;
+    font-size: 30pt;
+    text-align: center;
+}
+
+body {
+    background-color: crimson;
+}

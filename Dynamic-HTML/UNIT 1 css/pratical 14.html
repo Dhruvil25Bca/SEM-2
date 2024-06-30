@@ -1,0 +1,50 @@
+<!--text effect properties using CSS-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css 14</title>
+    <style>
+        .test1 {
+            white-space: nowrap;
+            border: 1px solid #000000;
+            width: 200px;
+            overflow: hidden;
+            text-overflow: clip;
+        }
+        
+        .test2 {
+            white-space: nowrap;
+            border: 1px solid #000000;
+            width: 200px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        h3 {
+            white-space: nowrap;
+            border: 1px solid #000000;
+            width: 200px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .test3:hover {
+            overflow: visible;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>The text-overflow Property</h1>
+    <h2>text-overflow: clip:</h2>
+    <p class="test1">this is some long text that will not fit in box</p>
+    <h2>text-overflow: ellipsis:</h2>
+    <p class="test2">This is some long text that will not fit in the box</p>
+    <h3 class="test3">hover effect with overflow visible where long text will not fit in the box.</h3>
+</body>
+
+</html>

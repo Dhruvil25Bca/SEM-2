@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 03</title>
+    <style>
+        .simp_bord {
+            border: 5pt solid red;
+        }
+        
+        #border_img {
+            border: 10px solid transparent;
+            padding: 30px;
+            border-image: url(https://i.pinimg.com/736x/6b/04/4a/6b044ae626e9eef153979a5a61734f5a.jpg)39 round;
+        }
+        
+        #r_corners1 {
+            border-radius: 20px;
+            background: red;
+            padding: 15px;
+            width: 150px;
+            height: 150px;
+        }
+        
+        #r_corners2 {
+            border-radius: 20px;
+            background: url(penguins.jpg);
+            background-repeat: repeat;
+            padding: 30px;
+            width: 150px;
+            height: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="simp_bord">Simple border</p>
+    <h1 id="r_corners1">The border-image Property</h1>
+    <h2 id="r_corner2">The border-image Property</h2>
+    <p>here, the middle sections of image are repeated to create a border:</p>
+    <p id="border_img">border-image:url(https://i.pinimg.com/736x/6b/04/4a/6b044ae626e9eef153979a5a61734f5 a.jpg)30 round;</p>
+    <p>Here is the original image:</p><img src="https://i.pinimg.com/736x/6b/04/4a/6b044ae626e9eef153979a5a61734f5a.jpg"> </body>
+
+</html>

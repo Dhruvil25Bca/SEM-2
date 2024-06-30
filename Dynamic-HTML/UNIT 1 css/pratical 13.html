@@ -1,0 +1,48 @@
+<!--gradient properties using CSS-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css 13</title>
+    <style>
+        #grad1 {
+            height: 100px;
+            background-image: linear-gradient(yellow, green, pink);
+        }
+        
+        #grad1a {
+            height: 100px;
+            background-image: linear-gradient(to right, yellow, green, pink);
+        }
+        
+        #grad2 {
+            height: 100px;
+            background-image: radial-gradient(red 5%, yellow 15%, green 60%);
+        }
+        
+        #grad21 {
+            height: 100px;
+            background-image: radial-gradient(circle, red 5%, yellow 15%, green 60%);
+        }
+        
+        #grad3 {
+            height: 100px;
+            background-image: repeating-radial-gradient(red, yellow 10%, green 15%);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Linear Gradient</h1>
+    <div id="grad1"></div>
+    <h3 id="grad1a"></h3>
+    <h1>Radial Gradient</h1>
+    <h1 id="grad2"></h1>
+    <h2 id="grad21"></h2>
+    <div id="grad3"></div>
+</body>
+
+</html>
