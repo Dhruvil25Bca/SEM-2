@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mouse event04</title>
+    <script type="text/javascript" language="JavaScript">
+        function animatediv() {
+            document.getElementById("div1").style.backgroundColor = "#00ff11";
+        }
+
+        function changefont() {
+            document.getElementById("oll").style.fontSize = "50px";
+        }
+    </script>
+</head>
+
+<body>
+    <div id="div1" onMouseOver="animatediv()">
+        This Event is occur while MOuse pointer Move on specific html element or any child element of that element. User can define this event in any html tag, Tag in which this event is define user has to move mouse pointer on that tag it will call onmouseOver()
+        event and javascript function will respond. It is similar like mouse move.
+
+        <ol id="oll" onMouseOver="changefont()">
+            Events
+            <li>onMouseMove</li>
+            <li>onMouseOver</li>
+            <li>Mouseout</li>
+            <li>Click</li>
+        </ol>
+    </div>
+</body>
+
+</html>

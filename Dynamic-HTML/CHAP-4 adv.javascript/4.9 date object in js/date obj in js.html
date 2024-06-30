@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DATE object in javascript</title>
+    <script type="text/javascript" language="JavaScript">
+        function today() {
+            var today = new Date();
+            var date = today.getDate();
+            document.getElementById("date").innerHTML = "Date=" + date + "<br>";
+            var month = today.getMonth() + 1;
+            document.getElementById("mon").innerHTML = "Month=" + month + "<br>";
+            var year = today.getFullYear();
+            document.getElementById("yr").innerHTML = "Year=" + year + "<br>";
+            var time = today.getHours();
+            document.getElementById("hrs").innerHTML = "Hrs=" + time + "<br>";
+            var min = today.getMinutes();
+            document.getElementById("min").innerHTML = "Minute=" + min + "<br>";
+            var sec = today.getSeconds();
+            document.getElementById("sec").innerHTML = "Sec=" + sec + "<br>";
+        }
+    </script>
+</head>
+
+<body>
+    <a href="javascript:today()">Current Date and Time</a><br>
+    <span id="date"></span><span id="mon"></span><span id="yr"></span><br>
+    <span id="hrs"></span><span id="min"></span><span id="sec"></span><br> &copy;CHIRAG
+</body>
+
+</html>

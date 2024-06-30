@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mouse event06</title>
+    <script type="text/javascript" language="JavaScript">
+        function mouse_down() {
+            document.getElementById("p1").style = "background-color:blue";
+        }
+    </script>
+</head>
+
+<body>
+    <h2>Click mouse on paragarph while mouse key down it will call function</h2>
+    <p id="p1" onmousedown="mouse_down()">
+        This Event is occur while MOuse pointer Move on specific html element or any child element of that element. User can define this event in any html tag, Tag in which this event is define user has to move mouse pointer on that tag it will call onmouseOver()
+        event and javascript function will respond. It is similar like mouse move.
+    </p><br>&copy;CHIRAG
+</body>
+
+</html>

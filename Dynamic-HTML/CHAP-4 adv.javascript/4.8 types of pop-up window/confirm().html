@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pop-up window</title>
+</head>
+
+<body>
+    <p>Click the button to display a confirm box.</p>
+    <button id="btn" onClick="conf()">Click</button>
+    <p id="pid"></p>
+    <script>
+        function conf() {
+            var b = confirm("Press the button!");
+            alert(b);
+            if (b == true) {
+                document.getElementById("pid").innerHTML = "You pressed OK!";
+            } else {
+                document.getElementById("pid").innerHTML = "You pressed Cancel!";
+            }
+        }
+    </script>
+
+</body>
+
+</html>

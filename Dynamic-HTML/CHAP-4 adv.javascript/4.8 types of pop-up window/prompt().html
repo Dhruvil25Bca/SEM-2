@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pop-up window</title>
+    <script type="text/javascript" language="JavaScript">
+        function maxno() {
+            var a, b;
+            a = parseInt(prompt("Enter no1"));
+            b = parseInt(prompt("Enter no2"));
+            if (a > b) {
+                alert(a + "is gerter then" + b);
+            } else if (a < b) {
+                alert(a + "is less then" + b);
+            } else {
+                alert(a + "&" + b + "are same");
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <button name="maxno" value="" onClick="maxno()">MAX of Two No's</button><br> &copy;CHIRAG
+</body>
+
+</html>

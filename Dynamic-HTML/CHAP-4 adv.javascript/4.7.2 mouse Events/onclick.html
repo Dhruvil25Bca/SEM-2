@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mouse event01</title>
+    <script type="text/javascript" language="JavaScript">
+        function sum() {
+            var a;
+            var b;
+            a = document.getElementById("no1").value;
+            b = document.getElementById("no2").value;
+            var c = parseInt(a) + parseInt(b);
+            document.getElementById("ans").innerHTML = "sum=" + c;
+        }
+    </script>
+</head>
+
+<body>
+    No1:<input type="text" id="no1" placeholder="Enter No1"><br> No2:
+    <input type="text" id="no2" placeholder="Enter No2"><br>
+    <button onClick="sum();">ans of sum</button><br>
+    <span id="ans">sum=</span> <br>&copy;CHIRAG
+</body>
+
+</html>

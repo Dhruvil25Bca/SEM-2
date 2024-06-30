@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>keyboard event</title>
+    <style>
+        .error {
+            font-size: 18px;
+            color: red;
+        }
+    </style>
+    <script type="text/javascript" language="JavaScript">
+        function calc() {
+            var ans = 1;
+            var no;
+            var i;
+            no = document.getElementById("no").value;
+            if (no == "") {
+                document.getElementById("no").style = "border-color:red";
+                document.getElementById("nomsg").innerHTML = "please enter no1";
+                return flase;
+            }
+            if (!Number(no)) {
+                document.getElementById("nomsg").innerHTML = "please enter only digits";
+                return false;
+            } else {
+                document.getElementById("nomsg").innerHTML = "";
+                for (i = parseInt(no); i >= 1; i--) {
+                    // alert(i);
+                    ans = ans * i;
+                }
+            }
+            document.getElementById("ans").innerHTML = "Factorial=" + ans;
+            return false;
+        }
+    </script>
+</head>
+
+<body>
+    <form method="post" name="frm1" onSubmit="return(calc());">
+        Number1:<input type="text" name="no" id="no">
+        <br><span id="nomsg" class="error"></span>
+        <br>
+        <input type="submit" name="submit" id="submit" value="calc"><br>
+        <span id="ans" style="font-size: 18px;color:green;">Factorial=</span><br>
+    </form>
+    &copy;CHIRAG
+</body>
+
+</html>

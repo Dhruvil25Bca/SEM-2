@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>parsing text data to another data type</title>
+    <script type="text/javascript" language="javascript">
+        function simpleinterest() {
+
+            var si;
+
+            var p, r, n;
+
+            p = parseFloat(document.getElementById("p").value);
+            if (!Number(p)) {
+                document.getElementById("msg1").innerHTML = "Please Enter only Numeric value";
+                return false;
+            } else {
+                document.getElementById("msg1").innerHTML = "";
+            }
+            r = parseFloat(document.getElementById("r").value);
+            if (!Number(r)) {
+                document.getElementById("msg2").innerHTML = "Please Enter only Numeric value";
+                return false;
+            } else {
+                document.getElementById("msg2").innerHTML = "";
+            }
+            n = parseFloat(document.getElementById("n").value);
+            if (!Number(n)) {
+                document.getElementById("msg3").innerHTML = "Please Enter only Numeric value";
+                return false;
+            } else {
+                document.getElementById("msg3").innerHTML = "";
+            }
+            si = (p * r * n) / 100;
+            document.getElementById("ans").innerHTML = "Simple Interest=" + si;
+            return false;
+        }
+    </script>
+</head>
+
+<body>
+
+
+    <form action="simple_interest.html" name="si">
+        <table>
+
+            <tr>
+
+                <td><label>Principal Amount</label></td>
+
+                <td><input type="text" name="p" id="p">
+
+                    <span id="msg1"></span></td>
+
+            </tr>
+
+            <tr>
+
+                <td><label>Rate of Interest </label></td>
+
+                <td><input type="text" name="r" id="r">
+
+                    <span id="msg2"></span></td>
+
+            </tr>
+
+            <tr>
+
+                <td><label>No of Year</label></td>
+
+                <td><input type="text" name="n" id="n">
+
+                    <span id="msg3"></span></td>
+
+            </tr>
+            <td colspan="2">
+                <input type="submit" onClick="return(simpleinterest());">
+            </td>
+    </form>
+
+    <span id="ans"><b>Simple Interest=</b></span>
+    <br>&copy;CHIRAG
+</body>
+
+</html>

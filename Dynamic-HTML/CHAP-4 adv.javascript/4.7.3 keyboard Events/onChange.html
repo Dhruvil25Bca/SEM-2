@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>keyboard event</title>
+    <script type="text/javascript" language="JavaScript">
+        function colorchange() {
+            var mycolor = document.getElementById('color').value;
+            alert(mycolor);
+            document.bgColor = mycolor;
+        }
+    </script>
+</head>
+
+<body>
+    <select name="color" id="color" onchange="colorchange()">
+    <option value="">Please Select</option>
+    <option value="red">Red</option>
+    <option value="green">Green</option>
+    <option value="orange">Orange</option>
+    <option value="blue">Blue</option>
+    <option value="pink">Pink</option>
+    <option value="brown">Brown</option>
+    <option value="yellow">Yellow</option>
+    <option value="#aa77bb">color code</option>
+</select>
+</body>
+
+</html>

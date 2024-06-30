@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>keyboard event</title>
+    <script type="text/javascript" language="JavaScript">
+        function printing() {
+            var text = document.getElementById("t1").value;
+            document.getElementById("s1").innerHTML = text.toUpperCase();
+            var text = document.getElementById("t2").value;
+            document.getElementById("s2").innerHTML = text.toLowerCase();
+            var text3 = document.getElementById("t3").value;
+            document.getElementById("s3").innerHTML = text3;
+        }
+    </script>
+</head>
+
+<body>
+    <input type="text" name="text" id="t1" onkeyPress="printing();"><br> Key Press=<span id="s1" style="color: #ff0000;"></span><br>
+    <input type="text" name="text" id="t2" onkeyUp="printing();"><br> Key UP=<span id="s2" style="color: #245bc0;"></span><br>
+    <input type="text" name="text" id="t3" onkeydown="printing();"><br> Key Down=<span id="s3" style="color: #ff0000;"></span><br> &copy;CHIRAG
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mouse event03</title>
+    <script type="text/javascript" language="JavaScript">
+        function msg() {
+            document.getElementById("fname").innerHTML = "Enter your First Name";
+            document.getElementById("lname").innerHTML = "Enter your Last Name";
+            document.getElementById("fname").style.color = "red";
+            document.getElementById("lname").style.color = "red";
+        }
+    </script>
+</head>
+
+<body>
+    First Name:<input type="text" id="fn" onMouseMove="msg();">
+    <span id="fname"></span>
+    <br> Last name:<input type="text" id="ln">
+    <span id="lname"></span><br> &copy;CHIRAG </body>
+
+</html>
