@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<foodmenu>
+    <food>
+        <name>Dosa</name>
+        <price>70</price>
+        <calories>120</calories>
+    </food>
+    <food>
+        <name>Omlet</name>
+        <price>55</price>
+        <calories>150</calories>
+    </food>
+</foodmenu>
