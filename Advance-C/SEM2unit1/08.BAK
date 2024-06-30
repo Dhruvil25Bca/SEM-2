@@ -1,0 +1,56 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+	struct state
+	{
+		char name[30];
+		int pop,literacy,income;
+	}state[5],temp;
+	int a,b;
+	clrscr();
+	printf("\n State \n -----");
+	for(a=0;a<3;a++)
+	{
+		printf("\n Name:");
+		flushall();
+		gets(state[a].name);
+		printf("\n population:");
+		flushall();
+		scanf("%d",&state[a].pop);
+		printf("\n Literacy Rate (out of 100%):");
+		flushall();
+		scanf("%d",&state[a].literacy);
+		printf("\n Per Capita Income:Rs");
+		flushall();
+		scanf("%d",&state[a].income);
+	}
+	for(a=0;a<5;a++)
+	{
+			for(b=a+1;b<3;b++)
+			{
+				if(state[a].literacy<state[b].literacy)
+				{
+					temp=state[a];
+					state[a]=state[b];
+					state[b]=temp;
+				}
+		       }
+	}
+	printf("\n State with highest literacy rate:%s",state[0].name);
+	for(a=0;a<3;a++)
+	{
+		for(b=a+1;b<3;b++)
+		{
+			if(state[a].income<state[b].income)
+			{
+				temp=state[b];
+				state[a]=state[b];
+				state[b]=temp;
+			}
+	       }
+	}
+	printf("\n State with highest per capita income:%s",temp.name);
+	return 0;
+}
+

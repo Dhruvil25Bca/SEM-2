@@ -1,0 +1,7 @@
+#include <stdio.h>
+#include <conio.h>
+void cpy(char *,char *);
+void main()
+{
+
+}

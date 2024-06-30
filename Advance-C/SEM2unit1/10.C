@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <conio.h>
+struct state
+{
+	char name;
+	int  dist;
+	long int pop;
+};
+struct population
+{
+	long int men;
+	long int women;
+	struct state s1;
+};
+void main()
+{
+	struct population p;
+	clrscr();
+	printf("\n state:");
+	scanf("%s",&p.s1.name);
+	printf("\n Districts:");
+	scanf("%d",&p.s1.dist);
+	printf("\n Men:");
+	scanf("%ld",&p.men);
+	printf("\n women:");
+	scanf("%ld",&p.women);
+	p.s1.pop=p.men+p.women;
+	printf("\n State:%s",p.s1.dist);
+	printf("\n Districts:%d",p.s1.dist);
+	printf("\n Men:%ld",p.men);
+	printf("\n Women:%ld",p.women);
+	printf("\n Population:%ld",p.s1.pop);
+	getch();
+}

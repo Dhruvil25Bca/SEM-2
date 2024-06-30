@@ -1,0 +1,92 @@
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+struct SLL
+{
+int info;
+struct SLL *link;
+}*first=NULL;
+typedef struct SLL node;
+void create_list(int);
+void display();
+void sort();
+void main()
+{
+	int ch,n,m,i,key;
+	clrscr();
+	printf("how many nodes you want in linklist:");
+	scanf("%d",&n);
+	for(i=0;i<n;i++)
+	{
+		printf("enter the element:");
+		scanf("%d",&m);
+		create_list(m);
+	}
+	display();
+	sort();
+	getch();
+}
+void create_list(int data)
+{
+	node *t,*p;
+	t=(node *)malloc(sizeof(node));
+	t->info=data;
+	t->link=NULL;
+	if(first==NULL)
+	{
+		first=t;
+	}
+	else
+	{
+		p=first;
+		while(p->link!=NULL)
+		p=p->link;
+		p->link=t;
+	}
+}
+void sort()
+{
+	node *p,*q;
+	int t;
+	if(first == NULL)
+	{
+		printf("\n link list is empty");
+	}
+	else
+	{
+		p=first;
+		while(p->link != NULL)
+		{
+			q=p->link;
+			while(q!=NULL)
+			{
+				if(p->info>q->info)
+				{
+					t=p->info;
+					p->info=q->info;
+					q->info=t;
+				}
+				q=q->link;
+			}
+			p=p->link;
+		}
+	}
+	display();
+}
+void display()
+{
+	node *q;
+	if(first == NULL)
+	{
+		printf("list is empty\n");
+		return;
+	}
+	q=first;
+	printf("list is:\n");
+	while(q!=NULL)
+	{
+		printf("%d->",q->info);
+		q=q->link;
+	}
+	printf("\n");
+}

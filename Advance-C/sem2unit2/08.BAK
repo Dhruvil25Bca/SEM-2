@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <conio.h>
+void main()
+{
+	int num1,num2,*ptr1=&num1,*ptr2=&num2;
+	clrscr();
+	printf("\n Enter first number:");
+	scanf("%d",ptr1);
+	printf("\n Enter second number:");
+	scanf("%d",ptr2);
+	if(*ptr1>*ptr2)
+	{
+		pritnf("\n %d is greater",*ptr1);
+	}
+	else
+	{
+		pritnf("\n %d is greater",*ptr2);
+	}
+	getch();
+}

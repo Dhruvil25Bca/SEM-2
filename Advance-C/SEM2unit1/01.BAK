@@ -1,0 +1,19 @@
+#include<stdio.h>
+#include<conio.h>
+struct state
+{
+   char name[10];
+   int dist;
+   long int pop;
+};
+void main()
+{
+    struct state s;
+    clrscr();
+    printf("\n Enter state name,number of dist.and population:");
+    scanf("%s %d %ld",&s.name,&s.dist,&s.pop);
+    printf("\n state:%s",s.name);
+    printf("\n District:%d",s.dist);
+    printf("\n population:%1d",s.pop);
+    getch();
+}

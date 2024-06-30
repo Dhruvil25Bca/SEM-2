@@ -1,0 +1,57 @@
+#include<stdio.h>
+#include<conio.h>
+#define SIZE 100
+struct bookdetail
+{
+  char title[100];
+  char author[100];
+  char publisher[100];
+  long int year;
+  long int pages;
+  long int price;
+};
+void output(struct bookdetail v[],int s);
+void main()
+{
+   struct bookdetail b[SIZE];
+   int n,i;
+   clrscr();
+   printf("Enter the Numbers of Books:");
+   scanf("%d",&n);
+   printf("\n");
+   for(i=0;i<n;i++)
+   {
+     printf("\n \t=:Book %d Detail:=\n",i+1);
+     printf("\n Enter the Book title:");
+     scanf("%s",&b[i].title);
+     printf("\n Enter the Author of Book:");
+     scanf("%s",&b[i].author);
+     printf("\n Enter the Publisher of Book:");
+     scanf("%s",&b[i].publisher);
+     printf("\n Enter publishing year of Book:");
+     scanf("%ld",&b[i].year);
+     printf("\n Enter the Pages of Book:");
+     scanf("%ld",&b[i].pages);
+     printf("\n Enter the Price of Book:");
+     scanf("%ld",&b[i].price);
+   }
+   output(b,n);
+   getch();
+}
+void output(struct bookdetail v[],int s)
+{
+   int i;
+   clrscr();
+   for(i=1;i<s;i++)
+   {
+      printf("\n");
+      printf("Book No:%d\n",i);
+      printf("Book %d title is=%s\n",i,v[i].title);
+      printf("Book %d Author is=%s\n",i,v[i].author);
+      printf("Book %d Publisher is=%s\n",i,v[i].publisher);
+      printf("Book %d publishing year is=%ld\n",i,v[i].year);
+      printf("Book %d Pages is=%ld\n",i,v[i].pages);
+      printf("Book %d Price is=%ld\n",i,v[i].price);
+      printf("\n");
+   }
+}

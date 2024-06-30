@@ -1,0 +1,25 @@
+#include <conio.h>
+#include <stdio.h>
+struct pro
+{
+	char name[20];
+	int procode,price;
+};
+void main()
+{
+	struct pro p,*ptr;
+	clrscr();
+	ptr=&p;
+	printf("\n Enter product name=");
+	gets(ptr->name);
+	printf("\n Enter product code=");
+	scanf("%d",&ptr->procode);
+	printf("\n Enter product price=");
+	scanf("%d",&ptr->price);
+	ptr->price+=ptr->price%10;
+	printf("\n product code=%d",ptr->procode);
+	printf("\n product name=%s",ptr->name);
+	printf("\n product price=%d",ptr->price);
+	getch();
+
+}

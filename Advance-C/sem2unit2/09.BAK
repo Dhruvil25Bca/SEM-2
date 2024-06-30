@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <conio.h>
+void Fact(int,int*);
+void main()
+{
+	int fact,num;
+	clrscr();
+	printf("\n Enter a number:");
+	scanf("%d",&num);
+	Fact(num,&fact);
+	printf("Factorial=%d",fact);
+	getch();
+}
+void Fact(int n,int *f)
+{
+	int i;
+	*f=1;
+	for(i=1;i<=n;i++)
+	*f=*f*i;
+}

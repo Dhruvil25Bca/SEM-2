@@ -1,0 +1,3 @@
+customer No. 	Account Type 	Balance
+101			Saving		2000
+102			Current 		5000

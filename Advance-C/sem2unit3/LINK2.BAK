@@ -1,0 +1,205 @@
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+struct SLL
+{
+int info;
+struct SLL *link;
+}*first=NULL;
+typedef struct SLL node;
+void create_list(int);
+void display();
+void insert_first(int);
+void deletef();
+void deletel();
+void insertbfk(int);
+void insertafk(int);
+void main()
+{
+int ch,n,m,i,key;
+do
+{
+printf("1.create list\n");
+printf("2.insert at first\n");
+printf("3.delete first\n");
+printf("4.delete last\n");
+printf("5.insert before key value\n");
+printf("6.insert after key value\n");
+printf("7.display\n");
+printf("8.quit\n");
+printf("enter your choice:");
+scanf("%d",&ch);
+switch(ch)
+{
+case 1:
+printf("how many nodes you want:");
+scanf("%d",&n);
+for(i=0;i<n;i++)
+{
+printf("enter the element:");
+scanf("%d",&m);
+create_list(m);
+}
+break;
+case 2:
+printf("\n enteer the element:");
+scanf("%d",&m);
+insert_first(m);
+break;
+case 3:
+deletef();
+break;
+case 4:
+deletel();
+break;
+case 5:
+display();
+printf("\n enter value of key");
+scanf("%d",&key);
+insertbfk(key);
+break;
+case 6:
+display();
+printf("\n enter value of key");
+scanf("%d",&key);
+insertafk(key);
+break;
+case 7:
+display();
+break;
+case 8:
+exit(0);
+default:
+printf("wrong choice\n");
+}
+}while(ch<=8);
+}
+void create_list(int data)
+{
+node *tmp,*p;
+tmp=(node *)malloc(sizeof(node));
+tmp->info=data;
+tmp->link=NULL;
+if(first==NULL)
+{
+first=tmp;
+}
+else
+{
+p=first;
+while(p->link!=NULL)
+p=p->link;
+p->link=tmp;
+}
+}
+void insert_first(int data)
+{
+node *tmp;
+tmp=(node *)malloc(sizeof(node));
+tmp->info=data;
+tmp->link=NULL;
+if(first==NULL)
+first=tmp;
+else
+{
+tmp->link=first;
+first=tmp;
+}
+}
+void display()
+{
+node *q;
+if(first==NULL)
+{
+printf("list is empty\n");
+return;
+}
+q=first;
+printf("list is:\n");
+while(q!=NULL)
+{
+printf("%d->",q->info);
+q=q->link;
+}
+printf("\n");
+}
+void deletef()
+{
+node *tmp;
+if(first==NULL)
+{
+printf("list is empty\n");
+}
+tmp=first;
+first=first->link;
+free(tmp);
+display();
+}
+void deletel()
+{
+node *q;
+if(first==NULL)
+{
+q=first;
+while(q->link->link!=NULL)
+{
+q=q->link;
+}
+free(q->link);
+q->link=NULL;
+display();
+}
+void insertbfk(int key)
+{
+node *tmp,*p;
+int data1;
+printf("\n entervalue of element");
+scanf("%d",&data1);
+tmp=(node*)malloc(sizeof(node));
+tmp->info+data1;
+tmp->link=NULL;
+p=first;
+if(p->info==key)
+{
+tmp->link=p;
+first=tmp;
+}
+else
+{
+while(p->link !=NULL)
+{
+if(p->link->info==key)
+{
+tmp->link=p->link;
+p->link=tmp;
+p=p->link;
+}
+p=p->link;
+}
+}
+}
+void insertafk(int key)
+{
+node *tmp,*p;
+int data1;
+printf("\n enter value of element");
+scanf("%d",&data1);
+tmp=(node *)malloc(sizeof(node));
+tmp->info=data1;
+tmp->link=NULL;
+p=first;
+while(p->link !=NULL)
+{
+if(p->info==key)
+{
+tmp->link=p->link;
+p->link=tmp;
+p=p->link;
+}
+p=p->link;
+}
+if(p->info==key)
+{
+p->link=tmp;
+}
+}

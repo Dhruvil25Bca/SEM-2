@@ -1,0 +1,51 @@
+#include
+<stdio.h>
+#include <conio.h>
+#include <stdlib.h>
+ void main()
+ {
+ FILE *fp;
+ char filename[100];
+ char ch;
+ int lc,wc,cc;
+
+ clrscr();
+ lc=0;
+ wc=0;
+ cc=0;
+
+//lc=linecount,wc=wordcount,cc=charcount
+ printf("enter file name:");
+ gets(filename);
+
+ fp=fopen(filename,"r");
+
+ if(fp)
+ {
+ while((ch=getc(fp))!=EOF)
+ {
+ if(ch!=' ' && ch!='\n'){++cc;}
+ if(ch==' '|| ch=='\n'){++wc;}
+ if(ch=='\n'){++lc;}
+ }
+
+  if(cc>0)
+  {
+  ++lc;
+  ++wc;
+  }
+  }
+  else
+  {
+  printf("\n failed to open the file");
+  }
+
+  printf("line:%d\n",lc);
+  printf("words:%d\n",wc);
+  printf("char:%d\n",cc);
+
+  getch();
+  }
+
+
+
