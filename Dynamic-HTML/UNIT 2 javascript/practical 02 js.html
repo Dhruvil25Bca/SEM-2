@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js 02</title>
+    <script type="text/javascript" language="JavaScript">
+        function nosum() {
+            var n1, n2;
+            var sum;
+            n1 = document.getElementById("no1").value;
+            n2 = document.getElementById("no2").value;
+            sum = parseInt(n1) + parseInt(n2);
+            document.getElementById("ans").innerHTML = "ANS=" + sum;
+            return false;
+        }
+    </script>
+</head>
+
+<body>
+    <form name="sum" action="practical 02 js.html" method="post">
+        no1:<input type="text" id="no1"><br> no2:
+        <input type="text" id="no2"><br>
+        <input type="submit" value="sum" onClick="return(nosum());"><br>
+        <h2 id="ans">ANS=</h2>
+    </form>
+    &copy;CHIRAG
+</body>
+
+</html>

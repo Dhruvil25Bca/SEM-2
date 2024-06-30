@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js 05</title>
+    <script type="text/javascript" language="JavaScript">
+        function stringreverse() {
+            var frm;
+            var len;
+            var i;
+            frm = document.getElementById("str").value;
+            document.getElementById("rev").value = "";
+            document.getElementById("dv").innerHTML = "";
+            len = frm.length;
+            //alert(len);
+            //alert(frm[len - 1]);
+            for (i = len; i > 0; i--) {
+                // alert(frm[i - 1]);
+                document.getElementById("rev").value += frm[i - 1];
+                document.getElementById("dv").innerHTML += frm[i - 1];
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <label>Enter String:</label><input type="text" name="str" id="str" onKeyUp="stringreverse()">
+    <label>Rever String:</label><input type="text" name="rev" id="rev">
+    <div id="dv"></div>
+    <br>&copy;CHIRAG
+</body>
+
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js 06</title>
+    <style>
+        .error {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+    <script type="text/javascript" language="JavaScript" src="p6.js"></script>
+    <script type="text/javascript" language="JavaScript">
+        function colorchange() {
+            var mycolor = document.getElementById('color').value;
+            alert(mycolor);
+            document.bgColor = mycolor;
+        }
+    </script>
+</head>
+
+<body>
+    <b> <form name="registration" method="post" action="#" >
+        <table>
+            <tr>
+                <!--1 tr-->
+                <td>
+                    Full Name
+                </td>
+                <td><input type="text" name="fname" id="fname" value=""><span id="msg1" class="error">for Ex.Mansuri Arman</span>
+                </td>
+            </tr>
+            <tr>
+                                <!--2 tr-->
+                <td>
+                    Last Name
+                </td>
+                <td><input type="text" name="lname" id="lname" value=""><span id="msglnm" class="error">for Ex. Arman</span>
+                </td>
+            </tr>
+            <tr>
+                <!--3 tr-->
+                <td>
+                    Pincode
+                </td>
+                <td><input type="text" name="pin" id="pin" value=""><br/><span id="msgpin" class="error"></span>
+                </td>
+            </tr>
+            <tr>
+                <!--4 tr-->
+                <td>
+                    Contact No
+                </td>
+                <td><input type="text" name="cno" id="cno" value=""><br/><span id="msg2" class="error"></span>
+                </td>
+            </tr>
+            <tr>
+                <!--5 tr-->
+                <td>
+                    E-mail
+                </td>
+                <td><input type="text" name="email" id="email" value="" size="30px"><br/><span id="msg3" class="error"></span>
+                </td>
+            </tr>
+            <tr>
+                <!--6 tr-->
+                <td>
+                    Gender
+                </td>
+                <td>
+                    <input type="radio" name="g" value="male">Male<br/>
+                    <input type="radio" name="g" value="female">Female<br/><span id="msg4" class="error"></span>
+                </td>
+            </tr>
+            <tr>
+                <!--7 tr-->
+                <td>
+                    Sports
+                </td>
+                <td>
+                    <input type="checkbox" name="c" value="Cricket">Cricket<br>
+                    <input type="checkbox" name="c" value="FootBall">FootBall<br>
+                    <input type="checkbox" name="c" value="TableTenis">TableTenis<br><span id="msg5" class="error"></span>
+                </td>
+            </tr>
+            <tr>
+                <!--8 tr-->
+                <td>Vehicle</td>
+                <td><select name="v" id="v" size="3" multiple="multiple">
+                    <option value="">Please Select</option>
+                    <option value="cycle">Cycle</option>
+                    <option value="car">Car</option>
+                    <option value="scooter">Scooter</option>
+                    <option value="riksha">Riksha</option>
+                </select><span id="msg6" class="error"></span></td>
+            </tr>
+            <tr>
+                <!--9 tr-->
+                <td>Date Of birth</td>
+                <td><input type="date" id="db" value="">
+                    <span id="msg7" class="error"></span></td>
+            </tr>
+            <tr>
+                <!--10 tr-->
+                <td>Age</td>
+                <td><input type="range" id="rg" value="0" min="0" max="100" step="1" onMouseMove="getval();">
+                    <span id="msg8" class="error"></span>
+                    <span id="ans"></span></td>
+            </tr>
+            <tr>
+                <!--11 tr-->
+                <td>&nbsp;</td>
+                <td><input type="submit" name="submit" value="Ok" onClick="return(validate());">
+                    <br><input type="button" name="reset" value="reset" onClick="reset()"></td>
+            </tr>
+        </table>
+    </form>
+    <select name="color" id="color" onchange="colorchange()">
+        <option value="">Please Select</option>
+        <option value="red">Red</option>
+        <option value="green">Green</option>
+        <option value="orange">Orange</option>
+        <option value="blue">Blue</option>
+        <option value="pink">Pink</option>
+        <option value="brown">Brown</option>
+        <option value="yellow">Yellow</option>
+        <option value="#aa77bb">color code</option>
+    </select> &copy;CHIRAG
+</b></body>
+
+</html>
