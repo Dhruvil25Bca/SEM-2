@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>click event</title>
+    <style>
+        div{
+            height: 200px;
+            border: 1px solid grey;
+        }
+    </style>
+    <script src="jquery-3.6.4.js" type="text/javascript" language="javascript">
+    </script>
+   <script type="text/javascript">
+    $(document).ready(function(){
+        $("#red").click(function(){
+            $("div").css({"background-color":"red","font-size":"20px","text-align":"center"});
+        });
+        $("#green").click(function(){
+            $("div").css({"background-color":"green","font-size":"20px","text-align":"center"});
+        });
+        $("#yellow").click(function(){
+            $("div").css({"background-color":"yellow","font-size":"20px","text-align":"center"});
+        })
+        ;$("#blue").click(function(){
+            $("div").css({"background-color":"blue","font-size":"20px","text-align":"center"});
+        });
+    });
+   </script>
+</head>
+<body>
+    <div style="widows: 20px;">
+        the pessimist sees difficulty in every opportunity.the pessimist sees difficulty in every opportunity.
+    </div>
+    <br>
+    <button id="red">red colour</button>
+    <button id="green">green colour</button>
+    <button id="yellow">yellow colour</button>
+    <button id="blue">blue colour</button>
+</body>
+</html>

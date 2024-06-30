@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dbl click event</title>
+    <script src="jquery-3.6.4.js" type="text/javascript" language="javascript">
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#btn1').dblclick(function () {
+                $("div").hide(3000);
+            });
+            $('#btn2').dblclick(function () {
+                $("div").show(3000);
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div style="width: 900px; height: 200px; border: 1px solid gray;font-size: 20px;">
+        the pessimist sees difficulty in every opportunity.the pessimist sees difficulty in every opportunity.
+    </div>
+    <br>
+    <button id="btn1">hide div</button>
+    <button id="btn2">show div</button>
+</body>
+
+</html>

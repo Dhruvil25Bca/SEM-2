@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document event</title>
+    <script type="text/javascript" src="../jquery-3.6.4.js" lang="jquery-3">
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#btn").click(function () {
+                alert("save button clicked");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <h1>DEMO ready() event</h1>
+    <input type="button" id="btn" value="save">
+</body>
+
+</html>

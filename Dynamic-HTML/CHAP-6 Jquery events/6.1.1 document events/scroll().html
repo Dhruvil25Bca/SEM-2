@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document event</title>
+    <script type="text/javascript" lang="jquery-3" src="../jquery-3.6.4.js"></script>
+    <script>
+        $(document).ready(function(){
+            var x=0;
+            $("p").scroll(function(){
+                x++;
+                $("span").text(x);
+            })
+        })
+    </script>
+</head>
+<body>
+    <h1>demo Scroll()</h1>
+    <p style="border:1px solid red;width: 450px;height: 100px;overflow:scroll;">
+    djfak
+fasf
+asdfk
+assjflads
+fjasd
+gads
+lgaj
+gadj
+gadjfkjlgjaklghag'kadhfg;ajkhadfk'g]
+
+
+gadjfkjlgjaklghagkgahg
+kagh
+adfkg
+
+fgkhajfgha
+gadjfkjlgjaklghagkgahggah
+gadjfdlgj
+fgagak
+jg
+gadjgakgji
+hgaghkad
+gadjfkjlgjaklghagkgahgg;agkdhgklshgka
+
+gf;lgakgk
+ljahkadg
+
+addsjgladf;gadjfdlgj ;klj
+</p>
+<b style="color:blue;font-size:18px;">scroll&nbsp;<span>0</span>&nbsp;times</b>
+</body>
+</html>

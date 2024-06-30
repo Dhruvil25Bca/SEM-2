@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>key up,down,press event</title>
+    <script src="jquery-3.6.4.js" type="text/javascript" language="javascript">
+    </script>
+   <script type="text/javascript">
+    $(document).ready(function(){
+        $("input:eq(0)").keyup(function(){
+            $("#s1").text($("#t1").val()).css("color","red");
+        });
+        $("input:eq(1)").keydown(function(){
+            $("#s2").text($("#t2").val()).css("color","green");
+        });
+        $("#t3").keypress(function(){
+            $("#s3").text($("#t3").val()).css("color","blue");
+        });
+    });
+   </script>
+</head>
+<body>
+    <input type="text" name="text" id="t1"><br> Key Press=<span id="s1"></span><br>
+    <input type="text" name="text" id="t2"><br> Key UP=<span id="s2"></span><br>
+    <input type="text" name="text" id="t3"><br> Key Down=<span id="s3"></span><br> &copy;CHIRAG
+</body>
+</html>
