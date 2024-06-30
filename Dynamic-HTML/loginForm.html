@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>LoginForm</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+    </style>
+    <script type="text/javascript" language="JavaScript">
+        function rangevalue() {
+            var r = document.getElementById("r").value;
+            document.getElementById("ans").value = r;
+        }
+    </script>
+</head>
+
+<body id="bd" align="center" background="https://c4.wallpaperflare.com/wallpaper/365/244/884/uchiha-itachi-naruto-shippuuden-anbu-silhouette-wallpaper-preview.jpg">
+    <h1>
+        Login Form By Chirag
+    </h1>
+    <form action="mailto:sadhu.chirag.amrutdas@gmail.com" method="post">
+        <h2> <label for="username">username:</label>
+            <input type="text" name="User name" placeholder="Enter User name" maxlength="10" autocomplete="on" style="border:02px dashed blue;" required></h2>
+        <h2><label for="Email">E-mail:</label>
+            <input type="email" name="Email" placeholder="enter email ID" style="border:02px dashed green;" required></h2>
+        <h2> <label for="password">Password:</label>
+            <input type="password" name="password" placeholder="Enter your password" value="" maxlength="8" pattern="[0-9]{8}" style="border:02px dashed red;" required></h2><br/>
+        <h2 style="color: red;">
+            <label for="age">Set age</label>
+            <input type="range" name="age" min="5" max="100" id="r" onMouseMove="rangevalue();">
+            <input type="text" value="" id="ans">
+        </h2>
+        <input type="submit" name="submit" value="submit"><input type="reset" name="reset" value="reset">
+    </form>
+</body>
+
+</html>
